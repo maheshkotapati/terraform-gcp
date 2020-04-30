@@ -23,5 +23,9 @@ module "gcp-compute-instance" {
   gcp_vm_disk_size_in_gb = var.gcp_vm_disk_size_in_gb
   gcp_network_name = var.gcp_network_name
   gcp_compute_engine_labels = var.gcp_compute_engine_labels
+}
 
+module "gcp-sql-database" {
+  source = "../gcp-sql-database"
+  gcp_compute_engine_ip = module.gcp-compute-instance.gcp-instance-external-ip
 }
