@@ -1,0 +1,4 @@
+gcp_compute_instance_terraform_auth.json
+.idea/
+modules/gcp-root/terraform.tfstate.backup
+modules/gcp-root/.terraform/
